@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.manager.appbanhang.activity.DangNhapActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDangNhap"
+        android:text="@string/ng_nh_p"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#03F6DF"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/line1"
+        android:layout_marginTop="5dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintTop_toBottomOf="@id/txtDangNhap">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:hint="Email"
+            android:id="@+id/edtEmai_DN"
+            android:drawablePadding="5dp"
+            android:inputType="textEmailAddress"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:drawableLeft="@drawable/ic_mail_24"
+            android:layout_height="wrap_content"/>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/line2"
+        android:layout_marginTop="5dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintTop_toBottomOf="@id/line1">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:hint="Pass"
+            android:inputType="textPassword"
+            android:drawablePadding="5dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/edtPass_DN"
+            android:layout_marginRight="10dp"
+            android:drawableLeft="@drawable/baseline_vpn_key_24"
+            android:layout_height="wrap_content"/>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        app:layout_constraintTop_toBottomOf="@id/line2"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="25dp"
+        android:background="@drawable/background_btn"
+        android:layout_marginRight="25dp"
+        android:id="@+id/btnDangNhap"
+        android:layout_marginTop="20dp"
+        android:text="Đăng Nhập"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/layout1"
+        app:layout_constraintTop_toBottomOf="@id/btnDangNhap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"
+            android:text="Nếu chưa có tài khoản? "/>
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:textSize="16sp"
+            android:id="@+id/txtDangKi"
+            android:textColor="@android:color/holo_red_light"
+            android:layout_height="wrap_content"
+            android:text="Đăng kí"/>
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:textSize="20sp"
+            android:gravity="right"
+            android:id="@+id/txtQuenMK"
+            app:layout_constraintTop_toBottomOf="@id/layout1"
+            android:textColor="@android:color/holo_red_light"
+            android:layout_height="wrap_content"
+            android:text="Quên mật khẩu"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
